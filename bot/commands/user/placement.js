@@ -20,11 +20,11 @@ async function userEligibleDrives({ sock, senderJID, reply_to, userFromDB }) {
 		reply_to
 	})
 	let placementProfile = await getPlacemnetDetailsByNumber({
-		whatsapp_number: userFromDB.whatsapp_number
+		whatsapp_number: senderJID
 	})
 	if (!placementProfile) {
 		placementProfile = await addPlacementPortalProfile({
-			user_whatsapp_number: userFromDB.whatsapp_number,
+			user_whatsapp_number: senderJID,
 			placement_cookie: "default"
 		})
 	}
@@ -32,7 +32,7 @@ async function userEligibleDrives({ sock, senderJID, reply_to, userFromDB }) {
 		res = await postGetPlacementHomePage({
 			reg_no: userFromDB.registration_number,
 			password: decryptString(userFromDB.password),
-			cookie: decryptString(userFromDB.ums_cookie)
+			cookie: decryptString(placementProfile.placement_cookie)
 		})
 		statusCode = res.status
 	} catch (error) {
@@ -86,7 +86,7 @@ async function userEligibleDrives({ sock, senderJID, reply_to, userFromDB }) {
 📧 *Email*: ${email}
 📚 *Program*: ${program}
 🎓 *CGPA*: ${cgpa}
-📚 *Reappear/Backglog*: ${reappear_or_backlog}
+📚 *Reappear/Backlog*: ${reappear_or_backlog}
 📜 *X Marks*: ${x_marks}
 📜 *XII Marks*: ${xii_marks}
 🎓 *Graduation Marks*: ${graduation_marks}

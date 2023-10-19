@@ -3,7 +3,7 @@ const { sendMessage } = require("../utils/messages")
 
 async function help({ sock, senderJID, reply_to }) {
 	let txtMsg = `
-\t\t⚡ *LPU-Genie Command Center* ⚡
+\t⚡ *LPU-Genie Command Center* ⚡
 
 *${Config.SUFFIX}help ⤑* List available commands.
 *${Config.SUFFIX}ping ⤑* Check BOT status.

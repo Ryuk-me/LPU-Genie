@@ -622,15 +622,15 @@ packages:
       '@eshaz/web-worker': 1.2.1
     dev: false
 
-  /@wasm-audio-decoders/flac@0.1.13:
-    resolution: {integrity: sha512-Ah0hurb+qO3kBjuBrmOSIDqe8DWkd/g5feoyd8jjoM46l//OmVrsG9lW0rnDJAKMhyMeRuWwCy/kv/SswzrW8Q==}
+  /@wasm-audio-decoders/flac@0.1.14:
+    resolution: {integrity: sha512-+ZVIXEDS4gZZn2pd7rnbiUAbHYz+ZeT0IFn2OZU5VODTg17/fjZcQGyGT4QNWY5DUQRLl+GCsIoas0UbXPV3HA==}
     dependencies:
       '@wasm-audio-decoders/common': 9.0.1
       codec-parser: 2.4.3
     dev: false
 
-  /@wasm-audio-decoders/ogg-vorbis@0.1.8:
-    resolution: {integrity: sha512-YwPSxN1xqGrVpON0OvUHwBnboKMA0P7n08j2K2SgZr5MI6ODWp2viW66XLL+gpNZBqRJhw+RdnyTUkZiZ70JOA==}
+  /@wasm-audio-decoders/ogg-vorbis@0.1.11:
+    resolution: {integrity: sha512-LbsJCWxJfHKNmsmJuOiLI5gFOa/mYQsipmQZgxtXQj10/0iWW33+3APkriO/ERVl5FaH/par3mZ+5X286DBO/Q==}
     dependencies:
       '@wasm-audio-decoders/common': 9.0.1
       codec-parser: 2.4.3
@@ -733,13 +733,13 @@ packages:
   /audio-decode@2.1.5:
     resolution: {integrity: sha512-+dnOsHalaEwYRDOyr+A89cp9Ms7WBaFaPcFuLI1/CJO7lVPUJQyTJWEnZktfh9Aw6zCbdD48jHMg8m33pIt3NQ==}
     dependencies:
-      '@wasm-audio-decoders/flac': 0.1.13
-      '@wasm-audio-decoders/ogg-vorbis': 0.1.8
+      '@wasm-audio-decoders/flac': 0.1.14
+      '@wasm-audio-decoders/ogg-vorbis': 0.1.11
       audio-buffer: 5.0.0
       audio-type: 2.2.1
-      mpg123-decoder: 0.4.8
+      mpg123-decoder: 0.4.9
       node-wav: 0.0.2
-      ogg-opus-decoder: 1.6.5
+      ogg-opus-decoder: 1.6.7
       qoa-format: 1.0.1
     dev: false
 
@@ -1455,8 +1455,8 @@ packages:
     engines: {node: '>=0.2.0'}
     dev: true
 
-  /libphonenumber-js@1.10.47:
-    resolution: {integrity: sha512-b4t7VQDV29xx/ni+58yl9KWPGjnDLDXCeCTLrD4V8vDpObXZRZBrg7uX/HWZ7YXiJKqdBDGgc+barUUTNB6Slw==}
+  /libphonenumber-js@1.10.48:
+    resolution: {integrity: sha512-Vvcgt4+o8+puIBJZLdMshPYx9nRN3/kTT7HPtOyfYrSQuN9PGBF1KUv0g07fjNzt4E4GuA7FnsLb+WeAMzyRQg==}
     dev: false
 
   /link-preview-js@3.0.5:
@@ -1562,8 +1562,8 @@ packages:
     resolution: {integrity: sha512-ySViT69/76t8VhE1xXHK6Ch4NcDd26gx0MzKXLO+F7NOtnqH68d9zF94nT8ZWSxXh8ELOERsnJO/sWt1xZYw5A==}
     dev: true
 
-  /mpg123-decoder@0.4.8:
-    resolution: {integrity: sha512-HXs8vbPjiFM0NOZ45T3C5i7mpYGEYhjH37SnFA907lOb9c93DQL40cDjerxj65IMwAYyPFq1aUjtDOjyR7O0gQ==}
+  /mpg123-decoder@0.4.9:
+    resolution: {integrity: sha512-l9e9BJ2/lAXjFuBB+JI+7PAPsEemHuN/LOoiFYAo/9Hu4S8hu5n+4nJMgndgiRcJ/W1CgSZ/AzXOPVdiMfxKBw==}
     dependencies:
       '@wasm-audio-decoders/common': 9.0.1
     dev: false
@@ -1673,12 +1673,12 @@ packages:
       boolbase: 1.0.0
     dev: false
 
-  /ogg-opus-decoder@1.6.5:
-    resolution: {integrity: sha512-7NjCePv+XAcfsPdVhVjrKdrKc2BUAxhzkSY9ySOv3FSgqymu1J90J7vQRtSd2DoStFASznmJr5LB9j/EXrJZfQ==}
+  /ogg-opus-decoder@1.6.7:
+    resolution: {integrity: sha512-Jzec9s2572JljRfVAWbHCm5YIIa1Z2CUvhwudK9Qh1UUNuKpuDxhaqNTL8lO4leXl1GnM0/Vok6gCicZ6fh0XA==}
     dependencies:
       '@wasm-audio-decoders/common': 9.0.1
       codec-parser: 2.4.3
-      opus-decoder: 0.7.1
+      opus-decoder: 0.7.2
     dev: false
 
   /omggif@1.0.10:
@@ -1694,8 +1694,8 @@ packages:
     dependencies:
       wrappy: 1.0.2
 
-  /opus-decoder@0.7.1:
-    resolution: {integrity: sha512-AOFCMKLn7LJm8pOkksY5TsW/6+XmNyh1OQS9gxmdOGHLNYoOBrjSfc0nPNcmUMGEzOrTqZtPi8VJ/ABs2Hndvg==}
+  /opus-decoder@0.7.2:
+    resolution: {integrity: sha512-d0gDTCeZfMStYDRyDhfcSq3RxF0znA78P7AsJwaEdM/UjWbGfvdiE0+azTE8+4kTC4B+lenFb1js4NoOxscb5g==}
     dependencies:
       '@wasm-audio-decoders/common': 9.0.1
     dev: false
@@ -1880,7 +1880,7 @@ packages:
       async: 3.2.4
       debug: 4.3.4
       pidusage: 2.0.21
-      systeminformation: 5.21.11
+      systeminformation: 5.21.12
       tx2: 1.0.5
     transitivePeerDependencies:
       - supports-color
@@ -2230,8 +2230,8 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /systeminformation@5.21.11:
-    resolution: {integrity: sha512-dIJEGoP5W7k4JJGje/b+inJrOL5hV9LPsUi5ndBvJydI80CVEcu2DZYgt6prdRErDi2SA4SqYd/WMR4b+u34mA==}
+  /systeminformation@5.21.12:
+    resolution: {integrity: sha512-fxMFr6qNqB8MG6tDsVDSdeQoPIwbFy/fQ3p51LWQYqt6PB1CeWrhcKW0c6U6UtoXuwpNawMDb7wlCkTmLXczCw==}
     engines: {node: '>=8.0.0'}
     os: [darwin, linux, win32, freebsd, openbsd, netbsd, sunos, android]
     hasBin: true
@@ -2467,7 +2467,7 @@ packages:
       cache-manager: 5.2.4
       futoin-hkdf: 1.5.3
       jimp: 0.22.10
-      libphonenumber-js: 1.10.47
+      libphonenumber-js: 1.10.48
       libsignal: github.com/adiwajshing/libsignal-node/11dbd962ea108187c79a7c46fe4d6f790e23da97
       link-preview-js: 3.0.5
       music-metadata: 7.13.4

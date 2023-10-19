@@ -2,7 +2,7 @@
 	"name": "lpu-genie",
 	"version": "1.0.0",
 	"description": "WhatsApp BOT created to help students at Lovely Professional University (LPU) to manage their academic life more efficiently.",
-	"main": "./app.js",
+	"main": "app.js",
 	"scripts": {
 		"start": "node ./bot/app.js",
 		"format": "prettier --ignore-path .gitignore --write \"**/*.+(js|ts|json)\""
