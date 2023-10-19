@@ -1,0 +1,67 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+
+model User {
+  id        String   @id @default(auto()) @map("_id") @db.ObjectId
+  registration_number      String   @unique
+  password   String
+  whatsapp_number String @unique
+  ums_cookie String
+  created_at DateTime @default(now())
+  is_permanent_ban Boolean @default(false)
+  user_type Role @default(STUDENT)
+  notification Notify?
+  block Block?
+  placement_portal Placement?
+  @@index([registration_number, created_at(sort: Desc),whatsapp_number])
+}
+
+model Block{
+    id        String   @id @default(auto()) @map("_id") @db.ObjectId
+    spam_calls_count Int @default(0)
+    consecutive_requests_count Int @default(0)
+    first_request_time DateTime
+    ban_count Int @default(0)
+    is_active  Boolean @default(true)
+    ban_reason String @default("Not specified")
+    banned_at DateTime?
+    banned_till  DateTime?
+    user_whatsapp_number String @unique
+    user User @relation(fields: [user_whatsapp_number],references: [whatsapp_number])
+}
+
+model Notify{
+    id        String   @id @default(auto()) @map("_id") @db.ObjectId
+    user_whatsapp_number String @unique
+    is_placement_notification_enabled Boolean @default(false)
+    is_message_notification_enabled Boolean @default(false)
+    created_at DateTime @default(now())
+    user User @relation(fields: [user_whatsapp_number],references: [whatsapp_number])
+    @@index([user_whatsapp_number, created_at(sort: Desc)])
+}
+
+model Placement{
+    id        String   @id @default(auto()) @map("_id") @db.ObjectId
+    placement_cookie String @default("default")
+    drives Json[]
+    created_at DateTime @default(now())
+    last_check_time DateTime @default(now())
+    user_whatsapp_number String @unique
+    user User @relation(fields: [user_whatsapp_number],references: [whatsapp_number])
+}
+
+enum Role {
+  STUDENT
+  NORMAL_USER
+  ADMIN
+}
